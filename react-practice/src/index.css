@@ -10,7 +10,10 @@ html {
 
 body {
     min-height: 100vh;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
+        'Droid Sans', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 .App {
@@ -28,7 +31,7 @@ body {
 header {
     width: 100%;
     padding: 0 0.25em;
-    background-color: cornflowerblue;
+    background-color: mediumblue;
     color: aliceblue;
     display: flex;
     justify-content: space-evenly;
@@ -48,27 +51,51 @@ main {
 footer {
     width: 100%;
     padding: 0.25em;
-    background-color: cornflowerblue;
+    background-color: mediumblue;
     color: aliceblue;
     display: grid;
     place-content: center;
 }
 
 .form {
-    width: 100%;
+    width: 200px;
     display: flex;
-    justify-content: flex-start;
-    margin: 0.5rem 00;
+    flex-direction: column;
+    margin: 0.5rem 0 0;
     padding: 0 0.5rem 0.25rem;
-    border-bottom: 1px solid rebeccapurple;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 10px;
+}
+
+.form {
+    width: 200px;
+    display: flex;
+    flex-direction: row; /* Change flex-direction to row */
+    align-items: center; /* Align items vertically */
+    margin: 0.5rem 0 0;
+    padding: 0 0.5rem 0.25rem;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 10px;
 }
 
 button {
-    height: 40px;
+    height: 48px;
     min-width: 48px;
     border-radius: 0.25rem;
     padding: 0.5rem;
     font-size: 1rem;
     background-color: aliceblue;
-    color: aqua;
+    color: mediumblue;
+    cursor: pointer;
+}
+
+input[type='text'] {
+    flex-grow: 1;
+    max-width: calc(100% - 58px);
+    min-height: 48px;
+    font-size: 1rem;
+    padding: 0.25rem;
+    border-radius: 0.25rem;
+    margin-right: 0.25rem;
+    outline: none;
 }
