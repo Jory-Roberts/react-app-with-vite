@@ -1,13 +1,14 @@
 import { useState } from 'react';
-const Form = () => {
+const Form = ({ handleSubmit }) => {
     const [item, setItem] = useState('');
 
-    const handleSubmit = (e) => {
+    const onSubmit = (e) => {
         e.preventDefault();
+        handleSubmit(item);
         setItem('');
     };
     return (
-        <form className="form" onSubmit={handleSubmit}>
+        <form className="form" onSubmit={onSubmit}>
             <label htmlFor="item">Item</label>
             <input
                 type="text"
